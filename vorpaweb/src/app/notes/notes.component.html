@@ -1,7 +1,5 @@
 <p>notes works!</p>
 
-<ul *ngIf="notes$ | async as notes else noData">
     <li *ngFor="let note of notes">
         {{note.text}}
     </li> 
-</ul>
