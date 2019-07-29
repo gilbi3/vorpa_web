@@ -12,7 +12,7 @@ import { of } from 'rxjs';
 })
 export class NotesComponent implements OnInit {
 
-  baseUrl: String = "https://vorpa.herokuapp.com/";
+  baseUrl: String;
   notes: Note[];
 
   constructor(private http: HttpClient) { }
@@ -25,7 +25,7 @@ export class NotesComponent implements OnInit {
   }
 
   getNotesObservable() : Observable<Note[]>{
-    return this.http.get<Note[]>(baseUrl + "/notes")
+    return this.http.get<Note[]>("https://vorpa.herokuapp.com/notes")
     .pipe(
       tap(data => console.log(data)), 
       catchError(this.handleError<Note[]>('getHeroes', []))
