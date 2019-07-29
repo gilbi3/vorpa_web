@@ -24,7 +24,7 @@ export class NotesComponent implements OnInit {
   }
 
   getNotesObservable() : Observable<Note[]>{
-    return this.http.get<Note[]>("http://localhost:8080/notes")
+    return this.http.get<Note[]>("https://vorpa.herokuapp.com/")
     .pipe(
       tap(data => console.log(data)), 
       catchError(this.handleError<Note[]>('getHeroes', []))
