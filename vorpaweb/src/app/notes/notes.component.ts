@@ -35,7 +35,6 @@ export class NotesComponent implements OnInit {
   getNotesFromObservable(): void {
     this.getNotesObservable()
     .subscribe(notes=>this.notes=notes, error=>console.log(error));
-    
   }
 
   private handleError<T> (operation = 'operation', result?: T) {
