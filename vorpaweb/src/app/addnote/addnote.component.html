@@ -1,1 +1,19 @@
 <p>addnote works!</p>
+
+<form [formGroup]="noteForm" (ngSubmit)="addNote(noteForm.value)">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="text">Text: </label>
+          <input type="text" formControlName="text" class="form-control">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+          <div class="form-group">
+            <button class="btn btn-primary" type="Submit">Submit</button>
+          </div>
+        </div>
+      </div>
+  </form>

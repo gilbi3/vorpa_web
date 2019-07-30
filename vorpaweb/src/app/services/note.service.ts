@@ -20,6 +20,10 @@ export class NoteService {
     );
   }
 
+  createNote(note: Note) : Observable<Note> {
+    return this.http.post<Note>("https://vorpa.herokuapp.com/notes", note);
+  }
+
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
    

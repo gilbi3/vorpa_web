@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { NoteService } from '../services/note.service';
+import { Note } from '../notes/Note';
 
 @Component({
   selector: 'app-addnote',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddNoteComponent implements OnInit {
 
-  constructor() { }
+  constructor(private noteService: NoteService) { }
 
   ngOnInit() {
+  }
+
+  noteForm = new FormGroup({
+    text: new FormControl('')
+  });
+
+  public createNote(note : Note) : void {
+    this.noteService.createNote(note);
   }
 
 }
