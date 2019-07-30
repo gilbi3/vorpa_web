@@ -7,6 +7,7 @@ import { NotesComponent } from './notes/notes.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddNoteComponent } from './addnote/addnote.component';
 import { NoteService } from './services/note.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,9 @@ import { NoteService } from './services/note.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [NoteService],
   bootstrap: [AppComponent]
