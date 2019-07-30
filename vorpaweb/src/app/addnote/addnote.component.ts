@@ -20,7 +20,14 @@ export class AddNoteComponent implements OnInit {
   });
 
   public createNote(note : Note) : void {
-    this.noteService.createNote(note);
+    this.noteService.createNote(note)
+    .subscribe((data) =>
+      {
+        console.log(data);
+        alert("Note saved to database.");
+        this.noteForm.reset();
+      }
+    );
   }
 
 }
