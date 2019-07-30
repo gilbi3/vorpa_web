@@ -5,20 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotesComponent } from './notes/notes.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CustomComponent } from './custom/custom.component';
+import { AddNoteComponent } from './addnote/addnote.component';
+import { NoteService } from './services/note.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotesComponent,
-    CustomComponent
+    AddNoteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [NoteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
