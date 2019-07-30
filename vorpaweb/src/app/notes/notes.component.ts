@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/internal/Observable';
-import { catchError, map, tap } from 'rxjs/operators';
 import { Note } from './Note';
-import { of } from 'rxjs';
 import { NoteService } from '../services/note.service';
 
 @Component({
