@@ -1,0 +1,7 @@
+ul {
+    margin: auto;
+    text-align: center;
+    list-style: none;
+    width: 33%;
+    padding-left: inherit;
+}

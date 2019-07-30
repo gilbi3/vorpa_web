@@ -1,6 +1,5 @@
-<p>addnote works!</p>
-
-<form [formGroup]="noteForm" (ngSubmit)="createNote(noteForm.value)">
+<div class="row">
+  <form [formGroup]="noteForm" (ngSubmit)="createNote(noteForm.value)" class="form">
     <div class="row">
       <div class="col-md-4">
         <div class="form-group">
@@ -10,10 +9,11 @@
       </div>
     </div>
     <div class="row">
-        <div class="col-md-10">
-          <div class="form-group">
-            <button class="btn btn-primary" type="Submit">Submit</button>
-          </div>
+      <div class="col-md-10">
+        <div class="form-group">
+          <button class="btn btn-primary" type="Submit">Submit</button>
         </div>
       </div>
+    </div>
   </form>
+</div>
