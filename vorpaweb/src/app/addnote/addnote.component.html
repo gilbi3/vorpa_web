@@ -1,15 +1,16 @@
+
 <div class="row">
-  <form [formGroup]="noteForm" (ngSubmit)="createNote(noteForm.value)" class="form">
-    <div class="row">
-      <div class="col-md-4">
+  <form [formGroup]="noteForm" (ngSubmit)="createNote(noteForm.value)" class="form add-note-form">
+    <div class="row text-input-row">
+      <div class="col-md-4 text-input">
         <div class="form-group">
-          <label for="text">Text: </label>
+          <label for="text">Make a Note</label>
           <input type="text" formControlName="text" class="form-control">
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-10">
+      <div class="submit-button-group-container">
         <div class="form-group">
           <button class="btn btn-primary" type="Submit">Submit</button>
         </div>

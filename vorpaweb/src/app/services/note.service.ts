@@ -25,13 +25,12 @@ export class NoteService {
   }
 
   deleteNote(noteId : Number) {
-    console.log("deleteNote called in service.");
-    console.log("https://vorpa.herokuapp.com/notes/" + noteId);
-    return this.http.delete<Note>("https://vorpa.herokuapp.com/notes/" + noteId)
+    var result = this.http.delete<Note>("https://vorpa.herokuapp.com/notes/" + noteId)
     .pipe(
       retry(1),
       catchError(this.handleError)
     );
+    return result;
   }
 
   private handleError<T> (operation = 'operation', result?: T) {

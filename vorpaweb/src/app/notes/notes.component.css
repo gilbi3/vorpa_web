@@ -1,7 +1,12 @@
-ul {
+.notes-row {
+    margin-bottom: 20px;
+}
+
+.notes-list {
     margin: auto;
     text-align: center;
     list-style: none;
     width: 33%;
     padding-left: inherit;
+    margin-bottom: 20px;
 }

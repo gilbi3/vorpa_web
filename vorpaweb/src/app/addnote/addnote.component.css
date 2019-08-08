@@ -1,0 +1,18 @@
+.text-input {
+    width: 100%;
+}
+
+.text-input-row {
+    width: 50%;
+    margin: auto;
+}
+
+.add-note-form {
+    text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+    .text-input-row {
+        width: 100%;
+    }
+  }

@@ -1,0 +1,30 @@
+nav {
+    font-family: 'Beth Ellen', cursive;
+}
+
+nav::after {
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 26px;
+    color: white;
+}
+
+.navbar-brand:hover {
+    color: lightblue;
+}
+
+.nav-container {
+    padding-bottom: 6px;
+}
+
+.main-whale-logo {
+    width: 150px;
+}
+
+@media only screen and (max-width: 500px) {
+    .main-whale-logo {
+        width: 100px;
+    }
+  }

@@ -1,5 +1,5 @@
-<div class="row">
-    <ul>
+<div class="row notes-row">
+    <ul class="notes-list">
         <li *ngFor="let note of notes">
             {{note.text}} 
             <a (click)="deleteNote(note._id)" class="note-delete">X</a>

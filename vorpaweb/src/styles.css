@@ -3,3 +3,36 @@ body  {
     background: black;
     color: white;
 }
+
+a.note-delete {
+    cursor: pointer;
+}
+
+.divider {
+    margin: 3%;
+}
+
+.small-divider {
+    width: 50%;
+    margin: auto;
+}
+
+.bottom-half-divider {
+    height: 10px;
+    border-top: solid white 1px;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-radius: 20px;
+}
+
+.top-half-divider {
+    height: 10px;
+    border-bottom: solid white 1px;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-radius: 20px;
+}
+
+.row {
+    font-family: 'Roboto Slab', serif;
+}

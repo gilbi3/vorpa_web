@@ -29,7 +29,13 @@ export class NotesComponent implements OnInit {
   deleteNote(noteId: Number): void {
     console.log("clicked");
     console.log(noteId);
-    this.noteService.deleteNote(noteId);
+    var response;
+    this.noteService.deleteNote(noteId).subscribe(
+      deleted => response = deleted.Completed,
+      error => console.log(error),
+      () => window.location.reload()
+    );
+    
   }
 
 }
