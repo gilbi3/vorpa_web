@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
-import { catchError, tap } from 'rxjs/operators';
+import { catchError, tap, retry } from 'rxjs/operators';
 import { of } from 'rxjs';
 import { Note } from '../notes/Note';
 
@@ -22,6 +22,16 @@ export class NoteService {
 
   createNote(note: Note) : Observable<Note> {
     return this.http.post<Note>("https://vorpa.herokuapp.com/notes", note);
+  }
+
+  deleteNote(noteId : Number) {
+    console.log("deleteNote called in service.");
+    console.log("https://vorpa.herokuapp.com/notes/" + noteId);
+    return this.http.delete<Note>("https://vorpa.herokuapp.com/notes/" + noteId)
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    );
   }
 
   private handleError<T> (operation = 'operation', result?: T) {
