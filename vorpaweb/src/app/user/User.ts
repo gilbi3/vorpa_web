@@ -1,6 +1,6 @@
 export class User {
     public Id: String;
-    public Username: String,
+    public Username: String;
     public FirstName: String;
     public LastName: String;
     public Email: String;

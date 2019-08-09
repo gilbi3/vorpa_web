@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/gilbi3/vorpa_web/issues"
   },
-  "homepage": "https://github.com/gilbi3/vorpa_web#readme"
+  "homepage": "https://github.com/gilbi3/vorpa_web#readme",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
+  }
 }

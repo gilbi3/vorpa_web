@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { NoteService } from '../services/note.service';
+import { NoteService } from '../notes/note.service';
 import { Note } from '../notes/Note';
 
 @Component({

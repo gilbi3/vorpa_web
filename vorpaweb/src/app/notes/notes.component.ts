@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Note } from './Note';
-import { NoteService } from '../services/note.service';
+import { NoteService } from './note.service';
 
 @Component({
   selector: 'app-notes',
