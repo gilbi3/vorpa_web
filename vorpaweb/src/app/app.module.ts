@@ -8,12 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddNoteComponent } from './addnote/addnote.component';
 import { NoteService } from './services/note.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotesComponent,
-    AddNoteComponent
+    AddNoteComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
