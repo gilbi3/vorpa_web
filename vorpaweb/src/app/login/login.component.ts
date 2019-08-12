@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
       res => response = res,
       error => console.log(error),
       () => {
-        console.log(response);
+        console.log(response.body);
       }
     );
   }
